@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/KinectView/MainScene.unity
+    guid: bac4fc76af8b1e249b042ae8d60c30f5
   m_configObjects: {}

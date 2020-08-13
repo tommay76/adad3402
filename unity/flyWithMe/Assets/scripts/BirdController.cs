@@ -16,8 +16,11 @@ public class BirdController : MonoBehaviour
     public float minDistancebetweenHands;
     public float yRotation;
     public float turningScale;
+    public Camera cameraa;
+
     void Start()
     {
+        cameraa.enabled = false;
         turningScale = 0.02f;
         hands = null;
         rightHand = null;
@@ -44,7 +47,7 @@ public class BirdController : MonoBehaviour
             tilt = getAngleBetweenHands();
         }
         fly();
-        Debug.Log("bird refreshing!"+ location.x);
+        //Debug.Log("bird refreshing!"+ location.x);
 
     }
     private float getAngleBetweenHands(){
@@ -62,7 +65,10 @@ public class BirdController : MonoBehaviour
             else if (ly < ry) angle = 90f;
         }
         if (distBetweenWings< minDistancebetweenHands){
+            cameraa.enabled = true;
             return rotateTowardsZero();
+        }else {
+            cameraa.enabled = false;
         }
         float newAngle = Mathf.Lerp(tilt,angle,Time.deltaTime*swivelSpeed);
         transform.eulerAngles = new Vector3(0,yRotation,newAngle);

@@ -76,7 +76,7 @@ public class mapGenerator : MonoBehaviour
     void Update()
     {
         GenerateMap();
-        Debug.Log("Map refreshing!"+ bird.location.x);
+        //Debug.Log("Map refreshing!"+ bird.location.x);
     }
 }
 [System.Serializable]
