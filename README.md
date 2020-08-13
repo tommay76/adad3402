@@ -9,3 +9,5 @@ The work is a stylized simulation of an open sky. The main plane can be controll
 an audience member's arms to simulate wings. Once the plane gets close enough to other planes, the sound of various
 instruments can be heard. After a period of time, the flocking algorithm align the planes, combining the instruments
 into a melancholy symphony of sounds.
+
+The executable file can be found in FlyWithMe/
